@@ -1,7 +1,8 @@
 let todoArray = [];
 const addTask = document.querySelector('.addBtn');
+const saveTask = document.querySelector('.saveBtn');
 
-addTask.addEventListener("click", (e)) {
+addTask.addEventListener('click', function(e){
     e.preventDefault;
     let todo = localStorage.getItem("todo");
     if (todo === null) {
@@ -9,4 +10,4 @@ addTask.addEventListener("click", (e)) {
     } else {
         todoArray = JSON.parse(todo);
     }
-}
+});
