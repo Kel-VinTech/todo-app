@@ -33,6 +33,7 @@ body{
 input {
     color: #555;
     border: none;
+    width: 80%;
     background: none;
     outline: none;
     font-size: 15px;
@@ -42,15 +43,21 @@ input {
 }
 
 .addBtn{
-    padding: 0.5em;
     border-radius: 50px;
-    outline: none;
-    background: rgb(0, 38, 255);
     border: none;
-    font-weight: 600;
+    outline: none;
+    background: rgb(12, 85, 219);
+}
+
+.saveBtn{
+    padding: 0.4rem 0.9rem;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    background: rgb(12, 85, 219);
 }
 button i {
-    font-size: 14px;
-    color: #fff;
-    
+    font-size: 13px;
+    color: #fff; 
+    padding: 0.5rem 0.3rem; 
 }
