@@ -1,35 +1,29 @@
-let todoArray = [];
+
 const addTask = document.querySelector('.addBtn');
-const saveTask = document.querySelector('.saveBtn');
-const listBox = document.querySelector('.listBox');
+const listBox = document.querySelector('#listBox');
 const text = document.querySelector('.text');
 
+
 addTask.addEventListener('click', function(e){
-    e.preventDefault;
-    text.innerHTML = text.value;
-    let todo = localStorage.getItem("todo");
-    // if (todo === null) {
-    //     todoArray = [];
-    // } else {
-    //     todoArray = JSON.parse(todo);
-    // }
-    // todoArray.push(text.value);
-    // text.value = "";
-    // localStorage.setItem("todo", JSON.stringify(todoArray));
-    console.log(text.value);
-    // displayTodo();
+   if(text.value.length == 0) {
+        alert("Please Enter a Task")
+   } else {
+     listBox.innerHTML +=   `<div class = "listBox">
+        <span id= "taskname">
+            ${text.value}
+        </span>
+        <button class="delete">
+            <i class="fa-solid fa-trash-can"></i>
+        </button>
+     </div>`;
+    
+     const removeTask = document.querySelectorAll('.delete');
+     for (var i = 0; i<removeTask.length; i++) {
+        removeTask[i].onclick = function() {
+            this.parentNode.remove();
+        }
+    }
+   };
 });
 
-// function displayTodo(){
-//     let todo = localStorage.getItem("todo");
-//     if (todo === null) {
-//         todoArray = [];
-//     } else {
-//         todoArray = JSON.parse(todo);
-//     }
-//     let code = "";
-//     todoArray.forEach(list,ind => {
-        
-//         listBox.innerHTML = code;
-//     });
-// }
+
