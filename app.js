@@ -10,4 +10,5 @@ addTask.addEventListener('click', function(e){
     } else {
         todoArray = JSON.parse(todo);
     }
+    console.log("hello")
 });
