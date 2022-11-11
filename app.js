@@ -12,15 +12,26 @@ addTask.addEventListener('click', function(e){
         <span id= "taskname">
             ${text.value}
         </span> 
-           <button class="delete">
+           <span id="list-item">
+           <input type="checkbox" class="check">
+
+             <button class="delete">
                 <i class="fa-solid fa-trash-can"></i>
-           </button>
+                </button 
+           </span>
      </div>`;
-    
+
+
+     const checkTask = document.querySelector('.check').addEventListener('click', e => {
+        if(e.target.checked) {
+            console.log()
+        }
+     });
      const removeTask = document.querySelectorAll('.delete');
      for (var i = 0; i<removeTask.length; i++) {
         removeTask[i].onclick = function() {
-            this.parentNode.remove();
+            this.parentElement.parentElement.remove();
+            
         }
     }
    };

@@ -46,7 +46,7 @@ footer{
     margin-bottom: 20px;
 }
 
-input {
+.text-space input {
     color: #555;
     border: none;
     width: 90%;
@@ -99,6 +99,12 @@ button i {
     border: none;
     outline: none;
     background: red;
+}
+
+#list-item{
+    display: flex;
+    align-items: center;
+    gap: 7px;
 }
 
 .delete i{
