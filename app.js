@@ -9,7 +9,7 @@ addTask.addEventListener('click', function(e){
         alert("Please Enter a Task")
    } else {
      listBox.innerHTML +=   `<div class = "listBox">
-        <span id= "taskname">
+        <span class="taskname" id= "taskname">
             ${text.value}
         </span> 
            <span id="list-item">
@@ -22,11 +22,14 @@ addTask.addEventListener('click', function(e){
      </div>`;
 
 
-     const checkTask = document.querySelector('.check').addEventListener('click', e => {
-        if(e.target.checked) {
-            console.log()
-        }
-     });
+     const checkTask = document.querySelectorAll('.listBox input[type="checkbox"]');
+
+     function check(e) {
+      console.log(e)
+     }
+     checkTask.forEach(checkbox => checkbox.addEventListener('click', check));
+     
+
      const removeTask = document.querySelectorAll('.delete');
      for (var i = 0; i<removeTask.length; i++) {
         removeTask[i].onclick = function() {
