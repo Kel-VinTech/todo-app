@@ -11,10 +11,10 @@ addTask.addEventListener('click', function(e){
      listBox.innerHTML +=   `<div class = "listBox">
         <span id= "taskname">
             ${text.value}
-        </span>
-        <button class="delete">
-            <i class="fa-solid fa-trash-can"></i>
-        </button>
+        </span> 
+           <button class="delete">
+                <i class="fa-solid fa-trash-can"></i>
+           </button>
      </div>`;
     
      const removeTask = document.querySelectorAll('.delete');
